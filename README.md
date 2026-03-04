@@ -342,7 +342,7 @@ cat > hello_world.cpp <<EOF
 
 int main() {
     std::string name;
-    std::cout << "Enter your name: " << endl;
+    std::cout << "Enter your name: " << std::endl;
     std::getline(std::cin, name);
     std::cout << "Hello world from " << name << std::endl;
     return 0;
@@ -402,7 +402,7 @@ nano hello_world.cpp
 
 int main() {
     std::string name;//Users's name. 
-    std::cout << "Enter your name: ";//User enters his name
+    std::cout << "Enter your name: " << std::endl;//User enters his name
     std::getline(std::cin, name);//Reading the string with spaces
     std::cout << "Hello world from " << name << std::endl;//Display the inscrip>
     return 0;
@@ -444,8 +444,8 @@ To https://github.com/ziatdinovamir/lab02-part1.git
 #include <string>
 
 int main() {
-    std::string name;
-    std::cout << "Enter your name: ";
+    std::string name; 
+    std::cout << "Enter your name: " << std::endl;
     std::getline(std::cin, name);
     std::cout << "Hello world from " << name << std::endl;
     return 0;
@@ -457,7 +457,7 @@ int main() {
 #include <string>
 int main() {
     std::string name;//Users's name.
-    std::cout << "Enter your name: ";//User enters his name
+    std::cout << "Enter your name: " << std::endl;//User enters his name
     std::getline(std::cin, name);//Reading the string with spaces
     std::cout << "Hello world from " << name << std::endl;//Display the inscription with  User's name
     return 0;
@@ -598,7 +598,7 @@ int
 main()
 {
   std::string name;                 // Users's name.
-  std::cout << "Enter your name: "; // User enters his name
+  std::cout << "Enter your name: " << std::endl; // User enters his name
   std::getline(std::cin, name);     // Reading the string with spaces
   std::cout << "Hello world from " << name
             << std::endl; // Display the inscription with  User's name
@@ -653,7 +653,7 @@ cat > hello_world.cpp <<EOF
 #include <string>
 int main() {
     std::string name;//Users's name.:)))))
-    std::cout << "Enter your name: ";//User enters his name:)))))     
+    std::cout << "Enter your name: " << std::endl;//User enters his name:)))))     
     std::getline(std::cin, name);//Reading the string with spaces:)))))
     std::cout << "Hello world from " << name << std::endl;//Display the inscription with  User's name :)))))
     return 0;
