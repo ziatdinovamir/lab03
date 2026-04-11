@@ -208,15 +208,13 @@ projects/
 Создаем `CMakeLists.txt` в папке `formatter_lib`, а так же основной и заголовочные файлы
 ```sh
 cd ~/ziatdinovamir/workspace/projects/formatter_lib
-cat > CMakeLists.txt << 'EOF'
-cmake_minimum_required(VERSION 3.4)
+cmake_minimum_required(VERSION 3.10)
 project(formatter)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_library(formatter STATIC formatter.cpp)
-EOF
 ```
 ```sh
 cat > formatter.cpp << 'EOF'
@@ -251,8 +249,7 @@ cmake --build _build
 *formatter_ex*, которая в свою очередь использует библиотеку *formatter*.
 ```sh
 cd ~/ziatdinovamir/workspace/projects/formatter_ex_lib
-cat > CMakeLists.txt << 'EOF'
-cmake_minimum_required(VERSION 3.4)
+cmake_minimum_required(VERSION 3.10)
 project(formatter_ex)
 
 set(CMAKE_CXX_STANDARD 11)
@@ -262,7 +259,6 @@ add_library(formatter_ex STATIC formatter_ex.cpp)
 
 target_include_directories(formatter_ex PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../formatter_lib)
 target_link_libraries(formatter_ex formatter)
-EOF
 ```
 ```sh
 cat > formatter_ex.h << 'EOF'
@@ -458,7 +454,7 @@ void solve(float a, float b, float c, float& x1, float& x2)
 }
 EOF
 ```
-Затем проваливаемся на одну степнь вниз
+Затем проваливаемся на одну ступень вниз
 ```sh
 cd ..
 cmake_minimum_required(VERSION 3.10)
